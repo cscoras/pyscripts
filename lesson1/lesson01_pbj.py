@@ -42,8 +42,8 @@
 
 
 bread = 9
-peanut_butter = 4
-jelly = 4
+peanut_butter = 5
+jelly = 5
 sandwich_count = 0
 
 
@@ -66,9 +66,11 @@ if bread >= 1:
 		jelly -= 1
 		print "You can make an open face peanut butter and jelly sandwich."
 	elif peanut_butter >=1 and jelly == 0:
-		print "You can make an open face peanut butter sandwich."
+		print "You can make an open faced peanut butter sandwich."
+	elif jelly >=1 and peanut_butter == 0:
+		print "You can make an open faced jelly sandwich."
 	else:
-		print "You're out of ingredients!"
+		print "You have", bread, "slices of bread leftover."
 
 
 
