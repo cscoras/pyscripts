@@ -50,9 +50,9 @@
 
 print "It's peanut butter jelly time!\n"
 
-bread = 0
-peanut_butter = 15
-jelly = 20
+bread = 5
+peanut_butter = 5
+jelly = 3
 sandwich_count = 0
 jellysandwich_count = 0
 pbsandwich_count = 0
@@ -60,55 +60,49 @@ openpbj_count = 0
 openpeanut_count = 0
 openjelly_count = 0
 
-if bread >= 2 and peanut_butter >= 1 and jelly >= 1:
-	while bread >= 2 and peanut_butter >= 1 and jelly >= 1:
-		bread -= 2 
-		peanut_butter -= 1 
-		jelly -= 1 
-		sandwich_count += 1
+while bread >= 2 and peanut_butter >= 1 and jelly >= 1:
+	bread -= 2 
+	peanut_butter -= 1 
+	jelly -= 1 
+	sandwich_count += 1
 if sandwich_count >= 1:
 	print "You can make",sandwich_count, "peanut butter and jelly sandwich(es)!\n"
 
 
-if bread >= 2 and jelly >= 1:
-	while bread >= 2 and jelly >= 1:
-		bread -= 2 
-		jelly -= 1  
-		jellysandwich_count += 1
+while bread >= 2 and jelly >= 1:
+	bread -= 2 
+	jelly -= 1  
+	jellysandwich_count += 1
 if jellysandwich_count >= 1:
 	print "You can make",jellysandwich_count, "jelly sandwich(es)!\n"
 
-if bread >= 2 and peanut_butter >= 1:
-	while bread >= 2 and peanut_butter >= 1:
-		bread -= 2 
-		peanut_butter -= 1  
-		pbsandwich_count += 1
+while bread >= 2 and peanut_butter >= 1:
+	bread -= 2 
+	peanut_butter -= 1  
+	pbsandwich_count += 1
 if pbsandwich_count >= 1:
 	print "You can make",pbsandwich_count, "peanut butter sandwich(es)!\n"
 
 
-if bread >= 1 and (peanut_butter >=1 and jelly >=1):
-	while bread >=1 and (peanut_butter >=1 and jelly >=1):
-		bread -= 1
-		peanut_butter -= 1
-		jelly -= 1
-		openpbj_count += 1
+while bread >=1 and (peanut_butter >=1 and jelly >=1):
+	bread -= 1
+	peanut_butter -= 1
+	jelly -= 1
+	openpbj_count += 1
 if openpbj_count >= 1:
 	print "You can make",openpbj_count, "open faced peanut butter and jelly sandwich(es)!\n"
 
-if bread >= 1 and (peanut_butter >= 1 and jelly == 0):
-	while bread >= 1 and (peanut_butter >= 1 and jelly == 0):
-		bread -= 1
-		peanut_butter -= 1
-		openpeanut_count += 1
+while bread >= 1 and (peanut_butter >= 1 and jelly == 0):
+	bread -= 1
+	peanut_butter -= 1
+	openpeanut_count += 1
 if openpeanut_count >= 1:
 	print "You can make", openpeanut_count, "open faced peanut butter sandwich(es)!\n"
 
-if bread >= 1 and (jelly >= 1 and peanut_butter == 0):
-	while bread >= 1 and (jelly >= 1 and peanut_butter == 0):
-		bread -= 1
-		jelly -= 1
-		openjelly_count += 1
+while bread >= 1 and (jelly >= 1 and peanut_butter == 0):
+	bread -= 1
+	jelly -= 1
+	openjelly_count += 1
 if openjelly_count >= 1:
 	print "You can make", openjelly_count, "open faced jelly sandwich(es)!\n"
 
