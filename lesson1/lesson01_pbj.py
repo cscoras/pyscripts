@@ -40,42 +40,6 @@
 #		If you don't have enough ingredients; still print the same message as before
 #		* To calculate whether you have an odd number, see https://github.com/shannonturner/python-lessons/blob/master/section_01_(basics)/simple_math.py
 
-
-bread = 9
-peanut_butter = 5
-jelly = 5
-sandwich_count = 0
-
-
-print "It's peanut butter jelly time!\n"
-
-if bread >= 2 and peanut_butter >= 1 and jelly >= 1:
-	while bread >= 2 and peanut_butter >= 1 and jelly >= 1:
-		bread -= 2 
-		peanut_butter -= 1 
-		jelly -= 1 
-		sandwich_count += 1
-
-if sandwich_count >= 1:
-	print "You can make",sandwich_count, "complete peanut butter and jelly sandwiches!"
-
-if bread >= 1:
-	if peanut_butter >=1 and jelly >=1:
-		bread -= 1
-		peanut_butter -= 1
-		jelly -= 1
-		print "You can make an open face peanut butter and jelly sandwich."
-	elif peanut_butter >=1 and jelly == 0:
-		print "You can make an open faced peanut butter sandwich."
-	elif jelly >=1 and peanut_butter == 0:
-		print "You can make an open faced jelly sandwich."
-	else:
-		print "You have", bread, "slices of bread leftover."
-
-
-
-
-
 # To satisfy the fourth goal:
 #		Continue from the third goal, but this time if you have enough bread and peanut butter but no jelly, print a message that tells you that you can make a peanut butter sandwich
 #		Or if you have more peanut butter and bread than jelly, that you can make a certain number of peanut butter & jelly sandwiches and a certain number of peanut butter sandwiches
@@ -84,3 +48,74 @@ if bread >= 1:
 #	    Continue from the fourth goal, but this time if you don't have enough ingredients, print a message that tells you which ones you're missing.
 
 
+print "It's peanut butter jelly time!\n"
+
+bread = 0
+peanut_butter = 15
+jelly = 20
+sandwich_count = 0
+jellysandwich_count = 0
+pbsandwich_count = 0
+openpbj_count = 0
+openpeanut_count = 0
+openjelly_count = 0
+
+if bread >= 2 and peanut_butter >= 1 and jelly >= 1:
+	while bread >= 2 and peanut_butter >= 1 and jelly >= 1:
+		bread -= 2 
+		peanut_butter -= 1 
+		jelly -= 1 
+		sandwich_count += 1
+if sandwich_count >= 1:
+	print "You can make",sandwich_count, "peanut butter and jelly sandwich(es)!\n"
+
+
+if bread >= 2 and jelly >= 1:
+	while bread >= 2 and jelly >= 1:
+		bread -= 2 
+		jelly -= 1  
+		jellysandwich_count += 1
+if jellysandwich_count >= 1:
+	print "You can make",jellysandwich_count, "jelly sandwich(es)!\n"
+
+if bread >= 2 and peanut_butter >= 1:
+	while bread >= 2 and peanut_butter >= 1:
+		bread -= 2 
+		peanut_butter -= 1  
+		pbsandwich_count += 1
+if pbsandwich_count >= 1:
+	print "You can make",pbsandwich_count, "peanut butter sandwich(es)!\n"
+
+
+if bread >= 1 and (peanut_butter >=1 and jelly >=1):
+	while bread >=1 and (peanut_butter >=1 and jelly >=1):
+		bread -= 1
+		peanut_butter -= 1
+		jelly -= 1
+		openpbj_count += 1
+if openpbj_count >= 1:
+	print "You can make",openpbj_count, "open faced peanut butter and jelly sandwich(es)!\n"
+
+if bread >= 1 and (peanut_butter >= 1 and jelly == 0):
+	while bread >= 1 and (peanut_butter >= 1 and jelly == 0):
+		bread -= 1
+		peanut_butter -= 1
+		openpeanut_count += 1
+if openpeanut_count >= 1:
+	print "You can make", openpeanut_count, "open faced peanut butter sandwich(es)!\n"
+
+if bread >= 1 and (jelly >= 1 and peanut_butter == 0):
+	while bread >= 1 and (jelly >= 1 and peanut_butter == 0):
+		bread -= 1
+		jelly -= 1
+		openjelly_count += 1
+if openjelly_count >= 1:
+	print "You can make", openjelly_count, "open faced jelly sandwich(es)!\n"
+
+
+if bread >=1:
+	print "You have", bread, "slice(s) of bread leftover.\n"
+if jelly >=1:
+	print "You have", jelly, "serving(s) of jelly leftover.\n"
+if peanut_butter >=1:
+	print "You have", peanut_butter, "serving(s) of peanut butter leftover.\n"
